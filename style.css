@@ -1,0 +1,154 @@
+:root {
+  --theme-color: #f45016;
+  --theme-deep: #cd3c0e;
+  --ink: #071b3b;
+  --canvas: #fff7f2;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; background: var(--canvas); }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Nunito Sans", Arial, sans-serif;
+  background: linear-gradient(117deg, #fff9f5 0%, #fff5ef 49%, #ffe9df 100%);
+}
+
+.app-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 38px 20px 50px;
+  /* border-top: 2px solid #c10d47; */
+}
+
+.download-card {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8913, var(--theme-color));
+  box-shadow: 0 10px 20px rgba(230, 78, 18, .24);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.trending-badge span { color: #ffe362; font-size: 14px; }
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 295px;
+  height: 94px;
+  margin: 13px auto 17px;
+  border-radius: 27px;
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 20px 35px rgba(52, 25, 16, .12);
+  font-size: 39px;
+  font-weight: 900;
+  letter-spacing: -1.8px;
+  line-height: 1;
+}
+
+.brand-mark .accent { color: var(--theme-color); }
+.brand-mark .dark { color: var(--ink); }
+
+h1 {
+  margin: 0;
+  color: var(--theme-deep);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.intro {
+  max-width: 470px;
+  margin: 10px auto 12px;
+  color: #364767;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: min(100%, 372px);
+  min-height: 67px;
+  margin: 0 auto 37px;
+  border: 6px solid rgba(255,255,255,.37);
+  border-radius: 28px;
+  color: #fff;
+  background: linear-gradient(125deg, #2861df, #173bae);
+  box-shadow: 0 20px 30px rgba(31, 79, 204, .38), inset 0 1px 0 rgba(255,255,255,.26);
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.download-button:hover { transform: translateY(-2px); box-shadow: 0 23px 33px rgba(31, 79, 204, .43), inset 0 1px 0 rgba(255,255,255,.26); }
+.download-button:focus-visible { outline: 3px solid var(--theme-color); outline-offset: 4px; }
+
+.features { display: grid; gap: 18px; padding: 0; margin: 0; list-style: none; text-align: left; }
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 101px;
+  padding: 24px 22px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 16px 31px rgba(104, 63, 43, .09);
+}
+
+.feature-icon { width: 19px; padding-top: 1px; font-size: 23px; line-height: 1; }
+.features li:nth-child(1) .feature-icon { color: #ff9f1a; }
+.features li:nth-child(2) .feature-icon { font-size: 20px; }
+.features li:nth-child(3) .feature-icon { font-size: 20px; }
+
+.features h2 { margin: 0 0 5px; font-size: 21px; font-weight: 600; line-height: 1.15; }
+.features p { margin: 0; color: #5c6b86; font-size: 13px; line-height: 1.35; }
+
+.official-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 36px 0 0;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: var(--theme-deep);
+  background: #fff;
+  box-shadow: 0 13px 22px rgba(98, 55, 40, .12);
+  font-size: 12px;
+  font-weight: 900;
+}
+.official-note span:first-child, .official-note span:nth-child(3) { color: var(--ink); font-size: 16px; }
+.official-note span:nth-child(2) { color: var(--ink); }
+
+@media (max-width: 480px) {
+  .app-page { padding: 27px 16px 36px; }
+  .brand-mark { width: min(100%, 280px); height: 86px; font-size: 35px; }
+  h1 { font-size: 27px; }
+  .intro { font-size: 14px; }
+  .download-button { min-height: 61px; margin-bottom: 29px; font-size: 16px; }
+  .features { gap: 14px; }
+  .features li { min-height: 92px; padding: 21px 19px; border-radius: 22px; }
+  .features h2 { font-size: 19px; }
+  .official-note { margin-top: 29px; font-size: 11px; }
+}
